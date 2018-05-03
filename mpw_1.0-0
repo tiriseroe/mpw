@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export DISPLAY=":0"
+
+/usr/bin/java -jar /usr/local/bin/masterpassword-gui.jar > /dev/null 2>&1 &
+
+# shellcheck.net: 03172017
+# https://github.com/koalaman/shellcheck/wiki/SC2069
+# SC2069: The order of the 2>&1 and the redirect matters. The 2>&1 has to be last.
